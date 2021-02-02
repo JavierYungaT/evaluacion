@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>lista-Destinos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-list>
+        <ion-list-header>
+            Lista de Destinos Turisticos
+        </ion-list-header>
+
+        <ion-item *ngFor="let turismo of turismo | async">
+            <ion-avatar slot="start">
+                <img src="./avatar-finn.png">
+            </ion-avatar>
+            <ion-label (click)="listarDestino(turismo.uid)">
+                <h2>{{turismo.nombre}}</h2>
+                <h3>{{turismo.direccion}}</h3>
+                <p>{{turismo.pais}}</p>
+                <p>{{turismo.imagen}}</p>
+                <p>{{turismo.descripcion}}</p>
+            </ion-label>
+        </ion-item>
+
+
+    </ion-list>
+
+
+</ion-content>

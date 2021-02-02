@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Destino Turistico</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <h3>Localizanos</h3>
+
+    <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="turistico.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Direccion</ion-label>
+        <ion-input [(ngModel)]="turistico.direccion"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Pais</ion-label>
+        <ion-input [(ngModel)]="turistico.pais"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Imagen</ion-label>
+        <ion-input [(ngModel)]="turistico.imagen"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Descripcion</ion-label>
+        <ion-input [(ngModel)]="turistico.descripcion"></ion-input>
+
+    </ion-item>
+
+
+    <ion-item>
+        <ion-button color="dark" (click)="guardar()">Enviar</ion-button>
+    </ion-item>
+
+
+</ion-content>
